@@ -18,7 +18,52 @@
         <ul class='user-nav'>
           <li class='search'>Поиск</li>
           <li class='login'><a href='login.html'>Вход</a></li>
-          <li class='cart'><a href='cart.html'>2 товара</a></li>
+          <li class='cart'>
+            <a href='cart.html'>2 товара</a>
+            <section class='hover-cart'>
+              <h2 class='visually-hidden'>Товары корзины</h2>
+              <table class='cart-table'>
+                <tr>
+                  <td>
+                    <span class="modal-cart-close">x</span>
+                  </td>
+                  <td>
+                    <img src='http://placehold.it/150x100' width='150' height='100'
+                    alt='Пломбир с апельсиновым джемом'>
+                  </td>
+                  <td>
+                    Пломбир с апельсиновым джемом
+                  </td>
+                  <td>
+                    1,5 кг х 200 руб.
+                  </td>
+                  <td>
+                    300 руб.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span class="modal-cart-close">x</span>
+                  </td>
+                  <td>
+                    <img src='http://placehold.it/150x100' width='150' height='100'
+                    alt='Клубничный пломбир с присыпкой из белого шоколада'>
+                  </td>
+                  <td>
+                    Клубничный пломбир с присыпкой из белого шоколада
+                  </td>
+                  <td>
+                    1,5 кг х 300 руб.
+                  </td>
+                  <td>
+                    450 руб.
+                  </td>
+                </tr>
+              </table>
+              <p>Итого: 750руб.</p>
+              <a class='button' href='#'>Оформить заказ</a>
+            </section>
+          </li>
         </ul>
         <p>С 10 до 20, ежедневно<br>
           8 812 450-25-25</p>
@@ -33,7 +78,18 @@
       </ul>
       <section class='filters'>
         <h2 class='visually-hidden'>Фильтр мороженного</h2>
-        <!--Здесь будет форма-->
+        <form class='filter-form' action='https://echo.htmlacademy.ru' method='post'>
+          <fieldset class='fillers'>
+            <legend>Наполнители</legend>
+            <ul class='fillers-list'>
+              <li>
+                <input class='fillers-item' type='checkbox' name='chocolate'>
+                <label></label>
+              </li>
+            </ul>
+          </fieldset>
+        </form>
+        <input class='button' type='submit' value='Применить'>
       </section>
       <section class='catalog'>
         <h2 class="visually-hidden">Список доступного мороженного</h2>
@@ -163,48 +219,5 @@
         (с)2017
       </p>
     </footer>
-    <section class='modal modal-cart'>
-      <h2 class='visually-hidden'>Товары корзины</h2>
-      <table class='cart-table'>
-        <tr>
-          <td>
-            <span class="modal-cart-close">x</span>
-          </td>
-          <td>
-            <img src='http://placehold.it/150x100' width='150' height='100'
-            alt='Пломбир с апельсиновым джемом'>
-          </td>
-          <td>
-            Пломбир с апельсиновым джемом
-          </td>
-          <td>
-            1,5 кг х 200 руб.
-          </td>
-          <td>
-            300 руб.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <span class="modal-cart-close">x</span>
-          </td>
-          <td>
-            <img src='http://placehold.it/150x100' width='150' height='100'
-            alt='Клубничный пломбир с присыпкой из белого шоколада'>
-          </td>
-          <td>
-            Клубничный пломбир с присыпкой из белого шоколада
-          </td>
-          <td>
-            1,5 кг х 300 руб.
-          </td>
-          <td>
-            450 руб.
-          </td>
-        </tr>
-      </table>
-      <p>Итого: 750руб.</p>
-      <a class='button' href='#'>Оформить заказ</a>
-    </section>
   </body>
 </html>

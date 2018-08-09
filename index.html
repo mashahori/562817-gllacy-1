@@ -11,13 +11,43 @@
           <img src='http://placehold.it/150x100' width='150' height='100' alt='Магазин Глэйси'>
         </a>
         <ul class='site-nav'>
-          <li><a href='catalog.html'>Каталог</a></li>
+          <li>
+            <a href='catalog.html'>Каталог</a>
+            <section class='site-nav-hover-menu'>
+              <h2 class='visually-hidden'>Выпадающее меню каталога</h2>
+              <ul class='modal-menu-list'>
+                <li class='modal-menu-item'><a href='#'>Новинки</a></li>
+                <li class='modal-menu-item'><a href='catalog.html'>Сливочное</a></li>
+                <li class='modal-menu-item'><a href='#'>Щербеты</a></li>
+                <li class='modal-menu-item'><a href='#'>Фруктовый лед</a></li>
+                <li class='modal-menu-item'><a href='#'>Мелорин</a></li>
+              </ul>
+            </section>
+          </li>
           <li><a href='delivery.html'>Доставка и оплата</a></li>
           <li><a href='about.html'>О Компании</a></li>
         </ul>
         <ul class='user-nav'>
-          <li class='search'>Поиск</li>
-          <li class='login'><a href='login.html'>Вход</a></li>
+          <li class='search'>
+            Поиск
+            <div class='hover-search'>
+              <input type='search' name='search' placeholder='Что ищем?'>
+            </div>
+          </li>
+          <li class='login'>
+            <a href='login.html'>Вход</a>
+            <section class='hover-login'>
+              <h2 class='visually-hidden'>Вход в личный кабинет</h2>
+              <form class='login-form' action='https://echo.htmlacademy.ru'
+              method='post'>
+                <input type='email' name='email' placeholder='Электронная почта'>
+                <input type='password' name='password' placeholder='Пароль' id='password'>
+              </form>
+              <input type='submit' value='Войти'>
+              <a class="link" href="#">Забыли пароль?</a>
+              <a class="link" href="#">Новая регистрация</a>
+            </section>
+          </li>
           <li class='cart'><a href='cart.html'>Пусто</a></li>
         </ul>
         <p>С 10 до 20, ежедневно<br>
@@ -202,31 +232,6 @@
         (с)2017
       </p>
     </footer>
-    <section class='modal modal-menu'>
-      <h2 class='visually-hidden'>Выпадающее меню каталога</h2>
-      <ul class='modal-menu-list'>
-        <li class='modal-menu-item'><a href='#'>Новинки</a></li>
-        <li class='modal-menu-item'><a href='catalog.html'>Сливочное</a></li>
-        <li class='modal-menu-item'><a href='#'>Щербеты</a></li>
-        <li class='modal-menu-item'><a href='#'>Фруктовый лед</a></li>
-        <li class='modal-menu-item'><a href='#'>Мелорин</a></li>
-      </ul>
-    </section>
-    <section class='modal modal-login'>
-      <h2 class='visually-hidden'>Вход в личный кабинет</h2>
-      <form class='login-form' action='https://echo.htmlacademy.ru'
-      method='post'>
-        <input type='email' name='email' placeholder='Электронная почта'>
-        <input type='password' name='password' placeholder='Пароль' id='password'>
-      </form>
-      <input type='submit' value='Войти'>
-      <a class="link" href="#">Забыли пароль?</a>
-      <a class="link" href="#">Новая регистрация</a>
-    </section>
-    <section class='modal modal-search'>
-      <h2 class='visually-hidden'>Поиск по сайту</h2>
-      <input type='search' name='search' placeholder='Что ищем?'>
-    </section>
     <section class='modal modal-feedback'>
       <h2>Мы обязательно вам ответим!</h2>
       <form class='feedback-form' action='https://echo.htmlacademy.ru' method='post'>
@@ -235,7 +240,7 @@
         <textarea class='feedback-text' placeholder='Напишите что-нибудь...'>
         </textarea>
       </form>
-      <input type='submit' value='Отправить'>
+      <input class='button' type='submit' value='Отправить'>
       <span class="modal-close">x</span>
     </section>
   </body>
