@@ -79,12 +79,70 @@
       <section class='filters'>
         <h2 class='visually-hidden'>Фильтр мороженного</h2>
         <form class='filter-form' action='https://echo.htmlacademy.ru' method='post'>
-          <fieldset class='fillers'>
-            <legend>Наполнители</legend>
-            <ul class='fillers-list'>
-              <li>
-                <input class='fillers-item' type='checkbox' name='chocolate'>
-                <label></label>
+          <fieldset class='sorting-list'>
+            <legend>Сортировка:</legend>
+            <select name='sorting'>
+              <option value='popular' selected>по популярности</option>
+              <option value='cheap'>сначала недорогие</option>
+              <option value='expensive'>сначала дорогие</option>
+              <option value='fat'>по жирности</option>
+            </select>
+          </fieldset>
+          <fieldset class='price-filter'>
+            <legend>Цена: 100 руб. – 500 руб.</legend>
+            <div class='range-filter'>
+              <div class='range-controls'>
+                <div class='scale'>
+                  <div class='bar'></div>
+                </div>
+                <div class='toggle toggle-min'></div>
+                <div class='toggle toggle-max'></div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class='fat-filter'>
+            <legend class='fat-filter-title'>Жирность:</legend>
+            <ul class='filter-fat-list'>
+              <li class='fat-item'>
+                <input type='radio' name='fat-free' id='fat-free'>
+                <label for='fat-free'>0%</label>
+              </li>
+              <li class='fat-item'>
+                <input type='radio' name='up-to-ten' id='to-ten' checked>
+                <label for='to-ten'>до 10%</label>
+              </li>
+              <li class='fat-item'>
+                <input type='radio' name='up-to-thirty' id='to-thirty'>
+                <label for='to-thirty'>до 30%</label>
+              </li>
+              <li class='fat-item'>
+                <input type='radio' name='above-thirty' id='above-thirty'>
+                <label for='above-thirty'>выше 30%</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class='fillers-filter'>
+            <legend>Наполнители:</legend>
+            <ul class='filter-fillers-list'>
+              <li class='fillers-item'>
+                <input type='checkbox' name='chocolate' id='filler-chocolate' checked>
+                <label for='filler-chocolate'>шоколадные</label>
+              </li>
+              <li class='fillers-item'>
+                <input type='checkbox' name='sugar' id='filler-sugar' checked>
+                <label for='filler-sugar'>сахарные присыпки</label>
+              </li>
+              <li class='fillers-item'>
+                <input type='checkbox' name='fruits' id='filler-fruits'>
+                <label for='filler-fruits'>фрукты</label>
+              </li>
+              <li class='fillers-item'>
+                <input type='checkbox' name='syrup' id='filler-syrup'>
+                <label for='filler-syrup'>сиропы</label>
+              </li>
+              <li class='fillers-item'>
+                <input type='checkbox' name='jam' id='filler-jam'>
+                <label for='filler-jam'>джемы</label>
               </li>
             </ul>
           </fieldset>
