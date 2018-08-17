@@ -1,3 +1,389 @@
 body {
-  background-color: #9bafa4;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #323232;
+  font-weight: 400;
+  background-color: #849d8f;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main-nav {
+  line-height: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #849d8f;
+}
+
+.site-nav,
+.user-nav,
+.menu-list-hover {
+  list-style: none;
+}
+
+.user-nav {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.user-nav a {
+  background-color: #a1b4a9;
+}
+
+.site-nav a {
+  border-bottom: 1px solid #9db1a5;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #333333;
+  background-color: #f7f6f3;
+  border: none;
+}
+
+.site-nav .site-nav-current {
+  background-color: #d07058;
+  border: none;
+}
+
+.user-nav a:hover,
+.user-nav a:focus {
+  color: #323232;
+  background-color: #f8f7f4;
+}
+
+.site-nav a:active {
+  color: #333333;
+}
+
+.menu-list-hover a {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+  border: none;
+}
+
+.menu-list-hover .new-ice-cream {
+  font-weight: 700;
+}
+
+.menu-list-hover a:hover,
+.menu-list-hover a:focus {
+  background-color: #fbded8;
+}
+
+.menu-list-hover a:active {
+  background-color: #f6b5a5;
+}
+
+.menu-list-hover .current-page {
+  color: #ffffff;
+  background-color: #d07058;
+}
+
+.search-form-hover input,
+.login-form-hover input {
+  font-size: 14px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.hover-cart {
+  background-color: #f8f7f4;
+}
+
+.hover-cart td {
+  font-size: 13px;
+  line-height: 16px;
+  color: #323232;
+}
+
+.hover-cart span {
+  color: #9bafa4;
+}
+
+.hover-cart .cart-sum {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.login-form-hover {
+  background-color: #f8f7f4;
+}
+
+.login-form-hover .login-button {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #ec573b;
+  color: #fefefe;
+}
+
+.login-form-hover .link-login {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #323232;
+  border-bottom: 1px solid #adacaa;
+  background-color: inherit;
+}
+
+.login-form-hover .link-login:hover,
+.login-form-hover .link-login:focus,
+.login-form-hover .link-login:active {
+  color: #e84d37;
+  border-color: #e84d37;
+}
+
+.time-and-tel {
+  text-align: right;
+}
+
+.time-and-tel .time-open {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.time-and-tel .tel {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.slider-list {
+  list-style: none;
+}
+
+.slider-item p {
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.slider-item .slider-button {
+  font-size: 32px;
+  line-height: 44px;
+  color: #ffffff;
+  background-color: #ec573b;
+  font-weight: 700;
+}
+
+.bonus-list {
+  list-style: none;
+}
+
+.bonus-list .bonus-raspberries {
+  background-image: url('../img/raspberries.png');
+  background-repeat: no-repeat;
+}
+
+.bonus-list .bonus-chocolate {
+  background-image: url('../img/choco-balls.png');
+  background-repeat: no-repeat;
+}
+
+.bonus-item h3 {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.bonus-item .bonus-text {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.button {
+  background-image: linear-gradient(to top, #e34d3a, #f26843);
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.button:hover,
+.button:focus {
+  background-image: linear-gradient(to top, #ec6f5e, #f58669);
+}
+
+.button:active {
+  background-image: linear-gradient(to top, #e1613e, #d74632);
+}
+
+.hit-list {
+  list-style: none;
+}
+
+.hit-list .hit-item {
+  background-image: url('../img/hit.svg');
+  background-repeat: no-repeat;
+}
+
+.hit-item .hit-price {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hit-item span {
+  font-size: 30px;
+}
+
+.hit-item .hit-link {
+  border-bottom: 1px solid #9db1a5;
+  font-weight: 500;
+}
+
+.hit-item .hit-link:hover,
+.hit-item .hit-link:focus,
+.hit-item .hit-link:active {
+  color: #ffbc9e;
+  border-color: #ffbc9e;
+}
+
+.features {
+  background-image: url('../img/waffle.png');
+  background-repeat: no-repeat;
+}
+
+.features .features-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.features .feature-list {
+  list-style: none;
+}
+
+.feature-list .feature-ice-cream{
+  background-image: url('../img/ice-cream.svg');
+  background-repeat: no-repeat;
+}
+
+.feature-list .feature-leaf{
+  background-image: url('../img/leaf.svg');
+  background-repeat: no-repeat;
+}
+
+.feature-list .feature-cow{
+  background-image: url('../img/cow.svg');
+  background-repeat: no-repeat;
+}
+
+.feature-list .feature-thermometer{
+  background-image: url('../img/thermometer.svg');
+  background-repeat: no-repeat;
+}
+
+.post-in-blog {
+  background-image: url('../img/ice-back.png');
+  background-repeat: no-repeat;
+}
+
+.post-in-blog h2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.post-in-blog .post-link {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #323232;
+  border-bottom: 2px solid #353535;
+}
+
+.suscribe {
+  background-image: url('../img/post-back.svg');
+  background-repeat: no-repeat;
+}
+
+.suscribe .suscribe-text {
+  color: #5a5a5a;
+}
+
+.suscribe .suscribe-button {
+  color: #ffffff;
+}
+
+.map .contacts{
+  background-image: url('../img/map-ice.svg');
+  background-repeat: no-repeat;
+  background-color: #fefefe;
+}
+
+.contacts p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts .adress {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts .time-and-phone {
+  line-height: 22px;
+}
+
+.contacts .phone {
+  color: #323232;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.main-footer {
+  color: #ffffff;
+}
+
+.social .social-list {
+  list-style: none;
+}
+
+.main-footer .info-list {
+  list-style: none;
+}
+
+.main-footer a {
+  border-bottom: 1px solid #9db1a5;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.info-list .special-item {
+  font-weight: 700;
+  background-image: url(../img/heart.svg);
+  background-repeat: no-repeat;
+}
+
+.main-footer .footer-copyright {
+  font-size: 12px;
+}
+
+.modal {
+  background-color: #f8f7f4;
+}
+
+.modal-feedback h2 {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.modal-feedback .feedback-button {
+  color: #ffffff;
 }
