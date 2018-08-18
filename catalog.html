@@ -8,7 +8,7 @@
     <link href='css/normalize.css' rel='stylesheet'>
     <link href='css/style.css' rel='stylesheet'>
   </head>
-  <body>
+  <body class='inner-page'>
     <div class='site-container'>
       <header class='main-header'>
         <nav class='main-nav'>
@@ -96,7 +96,7 @@
                     </td>
                   </tr>
                 </table>
-                <a class='button' href='#'>Оформить заказ</a>
+                <a class='button cart-link' href='#'>Оформить заказ</a>
               </section>
             </li>
           </ul>
@@ -107,15 +107,15 @@
         </nav>
       </header>
       <main class='container'>
-        <h1>Сливочное мороженое</h1>
         <ul class='breadcrumbs'>
           <li><a href='index.html'>Главная</a></li>
           <li><a href='#'>Каталог</a></li>
           <li class='breadcrumbs-current'>Сливочное</li>
         </ul>
+        <h1 class='main-title'>Сливочное мороженое</h1>
         <section class='filters'>
           <h2 class='visually-hidden'>Фильтр мороженного</h2>
-          <form class='filter-form' action='https://echo.htmlacademy.ru' method='post'>
+          <form class='filter-form' action='https://echo.htmlacademy.ru' method='get'>
             <fieldset class='sorting-list'>
               <legend>Сортировка:</legend>
               <select name='sorting'>
@@ -153,19 +153,19 @@
               <legend class='fat-filter-title'>Жирность:</legend>
               <ul class='filter-fat-list'>
                 <li class='fat-item'>
-                  <input type='radio' name='fat-free' id='fat-free'>
+                  <input type='radio' name='fat' id='fat-free'>
                   <label for='fat-free'>0%</label>
                 </li>
                 <li class='fat-item'>
-                  <input type='radio' name='up-to-ten' id='to-ten' checked>
+                  <input type='radio' name='fat' id='to-ten' checked>
                   <label for='to-ten'>до 10%</label>
                 </li>
                 <li class='fat-item'>
-                  <input type='radio' name='up-to-thirty' id='to-thirty'>
+                  <input type='radio' name='fat' id='to-thirty'>
                   <label for='to-thirty'>до 30%</label>
                 </li>
                 <li class='fat-item'>
-                  <input type='radio' name='above-thirty' id='above-thirty'>
+                  <input type='radio' name='fat' id='above-thirty'>
                   <label for='above-thirty'>выше 30%</label>
                 </li>
               </ul>
@@ -195,8 +195,8 @@
                 </li>
               </ul>
             </fieldset>
+            <button class='filter-button' type='submit'>Применить</button>
           </form>
-          <input class='button' type='submit' value='Применить'>
         </section>
         <section class='catalog'>
           <h2 class="visually-hidden">Список доступного мороженного</h2>
@@ -204,91 +204,139 @@
             <li class='catalog-item'>
               <img src='img/1.png' width='267' height='267'
                alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
-               <span>310р/кг</span>
-               <a href='#'>Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+               <p class='catalog-price'>310&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочное с апельсиновым джемом и цитрусовой стружкой
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/2.png' width='267' height='267'
                alt='Сливочно-кофейное с кусочками шоколада'>
-               <span>380р/кг</span>
-               <a href='#'>Сливочно-кофейное с кусочками шоколада</a>
+               <p class='catalog-price'>380&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочно-кофейное с кусочками шоколада
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/3.png' width='267' height='267'
                alt='Сливочно-клубничное с присыпкой из белого шоколада'>
-               <span>355р/кг</span>
-               <a href='#'>Сливочно-клубничное с присыпкой из белого шоколада</a>
+               <p class='catalog-price'>355&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочно-клубничное с присыпкой из белого шоколада
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/4.png' width='267' height='267'
                alt='Сливочное крем-брюле с карамельной подливкой'>
-               <span>415р/кг</span>
-               <a href='#'>Сливочное крем-брюле с карамельной подливкой</a>
+               <p class='catalog-price'>415&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочное крем-брюле с карамельной подливкой
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/11.png' width='267' height='267'
                alt='Сливочное с брусничным джемом'>
-               <span>325р/кг</span>
-               <a href='#'>Сливочное с брусничным джемом</a>
+               <p class='catalog-price'>325&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочное с брусничным джемом
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/12.png' width='267' height='267'
                alt='Сливочно-черничное с цельными ягодами черники'>
-               <span>410p/кг</span>
-               <a href='#'>Сливочно-черничное с цельными ягодами черники</a>
+               <p class='catalog-price'>410&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочно-черничное с цельными ягодами черники
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/13.png' width='267' height='267'
                alt='Сливочно-лимонное с карамельной присыпкой'>
-               <span>375p/кг</span>
-               <a href='#'>Сливочно-лимонное с карамельной присыпкой</a>
+               <p class='catalog-price'>375&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочно-лимонное с карамельной присыпкой
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/14.png' width='267' height='267'
                alt='Сливочное с шоколадной стружкой'>
-               <span>320p/кг</span>
-               <a href='#'>Сливочное с шоколадной стружкой</a>
+               <p class='catalog-price'>320&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочное с шоколадной стружкой
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/21.png' width='267' height='267'
                alt='Сливочно-ванильное с кусочками шоколада'>
-               <span>440p/кг</span>
-               <a href='#'>Сливочно-ванильное с кусочками шоколада</a>
+               <p class='catalog-price'>440&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочно-ванильное с кусочками шоколада
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/22.png' width='267' height='267'
                alt='Сливочноe с ментоловым сиропом'>
-               <span>435p/кг</span>
-               <a href='#'>Сливочноe с ментоловым сиропом</a>
+               <p class='catalog-price'>435&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочноe с ментоловым сиропом
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/23.png' width='267' height='267'
                alt='Сливочное с кусочками черного шоколада'>
-               <span>355p/кг</span>
-               <a href='#'>Сливочное с кусочками черного шоколада</a>
+               <p class='catalog-price'>355&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочное с кусочками черного шоколада
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
             <li class='catalog-item'>
               <img src='img/24.png' width='267' height='267'
                alt='Сливочное с мятным сиропом'>
-               <span>420p/кг</span>
-               <a href='#'>Сливочное с мятным сиропом</a>
+               <p class='catalog-price'>420&#8381;<span>/кг</span></p>
+               <p class='catalog-title'>
+                 <a class='catalog-link' href='#'>
+                   Сливочное с мятным сиропом
+                 </a>
+               </p>
                <a class='button catalog-item-hover' href='#'>Быстрый просмотр</a>
             </li>
           </ul>
           <ul class='paginator-list'>
-            <li class='pagination-item'><a>Назад</a></li>
-            <li class='pagination-item paginator-item-current'><a>1</a></li>
+            <li class='pagination-item disable'><a>Назад</a></li>
+            <li class='pagination-item pagination-item-current'><a>1</a></li>
             <li class='pagination-item'><a href='#'>2</a></li>
             <li class='pagination-item'><a href='#'>3</a></li>
             <li class='pagination-item'><a href='#'>4</a></li>
@@ -323,7 +371,7 @@
             <li class='social-button'>
               <a href='#'>
                 <span class='visually-hidden'>Инстаграм</span>
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                 <g>
                   <path fill="#FFFFFF" d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
@@ -341,7 +389,7 @@
             <li class='social-button'>
               <a href='#'>
                 <span class='visually-hidden'>Фэйсбук</span>
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                 <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
                   v3.444h3.021v3.445h-3.021v8.61h-3.021v-8.61H11v-3.445h3.021V9.455c0-1.902,1.353-3.445,3.021-3.445h3.021V9.455z"/>
@@ -351,7 +399,7 @@
             <li class='social-button'>
               <a href='#'>
                 <span class='visually-hidden'>Вконтакте</span>
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                 <g>
                   <path fill="#FFFFFF" d="M16.637,14.495c0.402-0.019,0.719-0.082,0.951-0.188c0.326-0.145,0.54-0.33,0.641-0.559
