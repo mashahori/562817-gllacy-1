@@ -106,7 +106,7 @@ a {
 }
 
 .hover-cart span {
-  color: #9bafa4;
+  color: #999999;
 }
 
 .hover-cart .cart-sum {
@@ -167,7 +167,7 @@ a {
 
 .slider-item p {
   font-size: 60px;
-  line-height: 70px;
+  line-height: 60px;
   font-weight: 700;
   color: #ffffff;
   text-align: center;
@@ -186,12 +186,12 @@ a {
 }
 
 .bonus-list .bonus-raspberries {
-  background-image: url('../img/raspberries.png');
+  background-image: url('../img/raspberries_back.jpg');
   background-repeat: no-repeat;
 }
 
 .bonus-list .bonus-chocolate {
-  background-image: url('../img/choco-balls.png');
+  background-image: url('../img/choco_back.jpg');
   background-repeat: no-repeat;
 }
 
@@ -259,7 +259,7 @@ a {
 }
 
 .features {
-  background-image: url('../img/waffle.png');
+  background-image: url('../img/waffle_back.jpg');
   background-repeat: no-repeat;
 }
 
@@ -321,6 +321,11 @@ a {
   color: #5a5a5a;
 }
 
+.suscribe-form .suscribe-email {
+  line-height: 24px;
+  color: #999999;
+}
+
 .suscribe .suscribe-button {
   color: #ffffff;
 }
@@ -343,6 +348,10 @@ a {
 }
 
 .contacts .time-and-phone {
+  line-height: 20px;
+}
+
+.time-and-phone p {
   line-height: 22px;
 }
 
@@ -378,6 +387,12 @@ a {
 
 .main-footer .footer-copyright {
   font-size: 12px;
+  line-height: 18px;
+  color: #fefefe;
+}
+
+.footer-copyright .link-copyright {
+  font-size: 12px;
 }
 
 .modal {
@@ -388,6 +403,12 @@ a {
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
+}
+
+.modal-feedback input,
+.modal-feedback textarea {
+  line-height: 24px;
+  color: #999999;
 }
 
 .modal-feedback .feedback-button {
@@ -441,6 +462,19 @@ a {
 
 .filter-form ul {
   list-style: none;
+  line-height: 18px;
+}
+
+.sorting-list option {
+  color: #323232;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.sorting-list .selected {
+  font-size: 16px;
+  font-weight: 500;
   line-height: 18px;
 }
 
