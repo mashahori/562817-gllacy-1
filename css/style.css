@@ -14,16 +14,36 @@ a {
   color: #ffffff;
 }
 
+.site-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 57px;
+  padding-right: 57px;
+}
+
 .main-nav {
   line-height: 18px;
   font-weight: 700;
   color: #ffffff;
+  display: flex;
+  min-height: 73px;
+}
+
+.main-header-logo {
+  width: 154px;
+  height: 64px;
 }
 
 .site-nav,
 .user-nav,
 .menu-list-hover {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav {
+  width: 405px;
 }
 
 .user-nav {
@@ -148,6 +168,8 @@ a {
 }
 
 .time-and-tel {
+  color: #ffffff;
+  font-weight: 700;
   text-align: right;
 }
 
@@ -163,6 +185,22 @@ a {
 
 .slider-list {
   list-style: none;
+}
+
+.slider-item {
+  display: none;
+}
+
+.btn-1:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+.btn-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+.btn-3:checked ~ .slider-list .slider-item:nth-child(3) {
+  display: block;
 }
 
 .slider-item p {
@@ -181,8 +219,16 @@ a {
   font-weight: 700;
 }
 
+.bonus {
+  margin-bottom: 40px;
+}
+
 .bonus-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .bonus-list .bonus-raspberries {
@@ -193,6 +239,10 @@ a {
 .bonus-list .bonus-chocolate {
   background-image: url('../img/choco_back.jpg');
   background-repeat: no-repeat;
+}
+
+.bonus-item {
+  width: 560px;
 }
 
 .bonus-item h3 {
@@ -226,13 +276,26 @@ a {
   background-image: linear-gradient(to top, #e1613e, #d74632);
 }
 
+.hit {
+  margin-bottom: 30px;
+}
+
 .hit-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hit-list .hit-item {
   background-image: url('../img/hit.svg');
   background-repeat: no-repeat;
+}
+
+.hit-item {
+  width: 267px;
 }
 
 .hit-item .hit-price {
@@ -271,6 +334,15 @@ a {
 
 .features .feature-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-item {
+  width: 484px;
+  margin-left: 78px;
 }
 
 .feature-list .feature-ice-cream{
