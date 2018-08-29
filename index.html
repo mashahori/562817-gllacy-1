@@ -9,6 +9,10 @@
     <link href='css/style.css' rel='stylesheet'>
   </head>
   <body>
+    <input class='visually-hidden btn-1' type='radio' id='btn-1' name='toggle' checked>
+    <input class='visually-hidden btn-2' type='radio' id='btn-2' name='toggle'>
+    <input class='visually-hidden btn-3' type='radio' id='btn-3' name='toggle'>
+    <div class='site-wrapper'>
     <div class='site-container'>
       <header class='main-header'>
         <nav class='main-nav'>
@@ -30,16 +34,16 @@
             <li><a href='about.html'>О Компании</a></li>
           </ul>
           <ul class='user-nav'>
-            <li class='search'>
-              <a class='#'>
-                Поиск
+            <li class='search-item'>
+              <a class='search' href='#'>
+                <span class='visually-hidden'>Поиск</span>
               </a>
               <form class='search-form-hover' action='https://echo.htmlacademy.ru' method='get'>
                 <input type='search' name='search' placeholder='Что ищем?'>
               </form>
             </li>
-            <li class='login'>
-              <a href='login.html'>Вход</a>
+            <li class='login-item'>
+              <a class='login' href='login.html'>Вход</a>
               <form class='login-form-hover' action='https://echo.htmlacademy.ru'
               method='post'>
                 <input type='email' name='email' placeholder='Электронная почта'>
@@ -49,7 +53,9 @@
                 <a class="link-login" href="#">Новая регистрация</a>
               </form>
             </li>
-            <li class='cart'><a href='cart.html'>Пусто</a></li>
+            <li class='cart-item'>
+              <a class='cart' href='cart.html'>Пусто</a>
+            </li>
           </ul>
         </nav>
         <div class='time-and-tel'>
@@ -59,39 +65,31 @@
       </header>
       <main>
         <h1 class='visually-hidden'>Магазин Глэйси</h1>
-        <section class='ice-cream-pics'>
+        <section class='ice-cream-slides'>
           <h2 class='visually-hidden'>Картинки с мороженным</h2>
-          <input class='visually-hidden btn-1' type='radio' id='btn-1' name='toggle' checked>
-          <input class='visually-hidden btn-2' type='radio' id='btn-2' name='toggle'>
-          <input class='visually-hidden btn-3' type='radio' id='btn-3' name='toggle'>
+
           <div class='slider-controls'>
             <label class='slider-controls-item slider-controls-item--1' for='btn-1'>Первый</label>
             <label class='slider-controls-item slider-controls-item--2' for='btn-2'>Второй</label>
             <label  class='slider-controls-item slider-controls-item--3' for='btn-3'>Третий</label>
           </div>
-          <ul class='slider-list container'>
-            <li class='slider-item'>
+          <ul class='slider-list'>
+            <li class='slider-item' id='slide-1'>
               <p>Крем-брюле и пломбир
                  с малиновым джемом
               </p>
-              <img src='img/slider-1.png' width='1045' height='881'
-               alt='Крем-брюле и пломбир с малиновым джемом'>
               <a class='button slider-button' href='#'>Давайте оба!</a>
             </li>
-            <li class='slider-item'>
+            <li class='slider-item' id='slide-2'>
               <p>Шоколадный пломбир
                 и лимонный сорбет
               </p>
-              <img src='img/slider-2.png' width='1065' height='859'
-               alt='Шоколадный пломбир и лимонный сорбет'>
               <a class='button slider-button' href='#'>Давайте оба!</a>
             </li>
-            <li class='slider-item'>
+            <li class='slider-item' id='slide-3'>
               <p>Пломбир с помадкой
                 и клубничный щербет
               </p>
-              <img src='img/slider-3.png' width='1079' height='854'
-               alt='Пломбир с помадкой и клубничный щербет'>
               <a class='button slider-button' href='#'>Давайте оба!</a>
             </li>
           </ul>
@@ -323,6 +321,7 @@
         </div>
       </footer>
     </div>
+  </div>
     <section class='modal modal-feedback'>
       <h2>Мы обязательно вам ответим!</h2>
       <form class='feedback-form' action='https://echo.htmlacademy.ru' method='post'>
