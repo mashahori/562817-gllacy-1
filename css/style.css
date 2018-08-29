@@ -38,6 +38,7 @@ input[type='radio'].visually-hidden {
 
 .main-header {
   padding-top: 10px;
+  position: relative;
 }
 
 .main-nav {
@@ -64,22 +65,32 @@ input[type='radio'].visually-hidden {
 
 .site-nav {
   width: 384px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 }
 
 .user-nav {
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
-  width: 267px;
+  max-width: 262px;
   margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  justify-content: space-between;
 }
 
 .user-nav a {
   background-color: #a1b4a9;
+  display: block;
 }
 
 .site-nav a {
   border-bottom: 1px solid #9db1a5;
+  display: block;
 }
 
 .site-nav a:hover,
@@ -102,6 +113,17 @@ input[type='radio'].visually-hidden {
 
 .site-nav a:active {
   color: #333333;
+}
+
+.site-nav-catalog:hover .menu-list-hover,
+.site-nav-catalog:focus .menu-list-hover {
+  display: block;
+}
+
+
+.menu-list-hover {
+  display: none;
+  position: absolute;
 }
 
 .menu-list-hover a {
@@ -128,6 +150,12 @@ input[type='radio'].visually-hidden {
 .menu-list-hover .current-page {
   color: #ffffff;
   background-color: #d07058;
+}
+
+.search-form-hover,
+.login-form-hover {
+  display: none;
+  position: absolute;
 }
 
 .search-form-hover input,
@@ -190,6 +218,9 @@ input[type='radio'].visually-hidden {
 }
 
 .time-and-tel {
+  position: absolute;
+  bottom: -115px;
+  right: 0px;
   color: #ffffff;
   font-weight: 700;
   text-align: right;
@@ -442,6 +473,10 @@ input[type='radio'].visually-hidden {
   height: 430px;
 }
 
+.map {
+  min-height: 430px;
+}
+
 .contacts-map .contacts{
   width: 250px;
   margin: 0;
@@ -600,18 +635,17 @@ input[type='radio'].visually-hidden {
 }
 
 .filters {
-  width: 860px;
   margin-bottom: 40px;
 }
 
 .filter-form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .filter-form fieldset {
   border: none;
+  background-color: #a6b7ae;
 }
 
 .filter-form legend{
@@ -633,7 +667,7 @@ input[type='radio'].visually-hidden {
   margin: 0;
   padding: 0;
   width: 195px;
-  background-color: #a6b7ae;
+  margin-right: 16px;
 }
 
 .sorting-list option {
@@ -653,21 +687,20 @@ input[type='radio'].visually-hidden {
   margin: 0;
   padding: 0;
   width: 220px;
-  background-color: #a6b7ae;
+  margin-right: 16px;
 }
 
 .filter-form .fat-filter {
   margin: 0;
   padding: 0;
   width: 415px;
-  background-color: #a6b7ae;
 }
 
 .filter-form .fillers-filter {
   margin: 0;
   padding: 0;
   width: 700px;
-  background-color: #a6b7ae;
+  margin-right: 14px;
 }
 
 .filter-form .filter-button {
@@ -736,6 +769,7 @@ input[type='radio'].visually-hidden {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .paginator-list .pagination-item {
