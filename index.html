@@ -48,13 +48,17 @@
               method='post'>
                 <input type='email' name='email' placeholder='Электронная почта'>
                 <input type='password' name='password' placeholder='Пароль' id='password'>
-                <input class='button login-button' type='submit' value='Войти'>
-                <a class="link-login" href="#">Забыли пароль?</a>
-                <a class="link-login" href="#">Новая регистрация</a>
+                <div class='login-link-wrapper'>
+                  <input class='button login-button' type='submit' value='Войти'>
+                  <div>
+                    <a class="link-login" href="#">Забыли пароль?</a>
+                    <a class="link-login" href="#">Новая регистрация</a>
+                 </div>
+                </div>
               </form>
             </li>
             <li class='cart-item'>
-              <a class='cart' href='cart.html'>Пусто</a>
+              <a class='cart'>Пусто</a>
             </li>
           </ul>
         </nav>
@@ -67,7 +71,6 @@
         <h1 class='visually-hidden'>Магазин Глэйси</h1>
         <section class='ice-cream-slides'>
           <h2 class='visually-hidden'>Картинки с мороженным</h2>
-
           <div class='slider-controls'>
             <label class='slider-controls-item slider-controls-item--1' for='btn-1'>Первый</label>
             <label class='slider-controls-item slider-controls-item--2' for='btn-2'>Второй</label>
@@ -118,41 +121,33 @@
               <img src='img/1.png' width='267' height='267'
                alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
                <p class='hit-price'>310&#8381;<span>/кг</span></p>
-               <p class='hit-title'>
                  <a class='hit-link' href='#'>
                    Сливочное с апельсиновым джемом и цитрусовой стружкой
                  </a>
-               </p>
             </li>
             <li class='hit-item'>
               <img src='img/2.png' width='267' height='267'
                alt='Сливочно-кофейное с кусочками шоколада'>
                <p class='hit-price'>380&#8381;<span>/кг</span></p>
-               <p class='hit-title'>
                  <a class='hit-link' href='#'>
                    Сливочно-кофейное с кусочками шоколада
                  </a>
-               </p>
             </li>
             <li class='hit-item'>
               <img src='img/3.png' width='267' height='267'
                alt='Сливочно-клубничное с присыпкой из белого шоколада'>
                <p class='hit-price'>355&#8381;<span>/кг</span></p>
-               <p class='hit-title'>
                  <a class='hit-link' href='#'>
                    Сливочно-клубничное с присыпкой из белого шоколада
                  </a>
-               </p>
             </li>
             <li class='hit-item'>
               <img src='img/4.png' width='267' height='267'
                alt='Сливочное крем-брюле с карамельной подливкой'>
                <p class='hit-price'>415&#8381;<span>/кг</span></p>
-               <p class='hit-title'>
                  <a class='hit-link' href='#'>
                    Сливочное крем-брюле с карамельной подливкой
                  </a>
-               </p>
             </li>
           </ul>
         </section>
@@ -165,14 +160,14 @@
               Все наше мороженое изготавливается на собственном производстве,
                с использованием современного оборудования и проверенных временем технологий.
             </li>
+            <li class='feature-item feature-cow'>
+              Закупка ингредиентов  производится только у проверенных фермерских
+               хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+            </li>
             <li class='feature-item feature-leaf'>
               Для приготовления мороженого используются настоящие сливки и молоко
                высочайшего качества. Все дополнительные ингредиенты и добавки
                 произведены из натурального, экологически чистого сырья
-            </li>
-            <li class='feature-item feature-cow'>
-              Закупка ингредиентов  производится только у проверенных фермерских
-               хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
             </li>
             <li class='feature-item feature-thermometer'>
               Доставка нашего мороженого до заказчиков осуществляется в специальном
@@ -181,7 +176,7 @@
             </li>
           </ul>
         </section>
-        <div class='columns'>
+        <div class='index-columns'>
           <article class='post-in-blog'>
             <h2>Новое в нашем блоге</h2>
             <a class='post-link' href='#'>10 способов сервировки
@@ -189,14 +184,17 @@
           </article>
           <section class='suscribe'>
             <h2 class='visually-hidden'>Подписка на рассылку</h2>
-            <p class='suscribe-text'>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
-               самого вкусного, что у нас происходит. Обещаем не спамить и не слать
-                всякой ненужной ерунды. Честно =)</p>
-            <form class='suscribe-form' action='https://echo.htmlacademy.ru'
-            method='post'>
-              <input class='suscribe-email' type='email' name='email' placeholder='Электронная почта' id='email'>
-            </form>
-            <input class='button suscribe-button' type='submit' value='Отправить'>
+            <div class='suscribe-wrapper'>
+              <p class='suscribe-text'>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего
+                 самого вкусного, что у нас происходит. Обещаем не спамить и не слать
+                  всякой ненужной ерунды. Честно =)</p>
+              <form class='suscribe-form' action='https://echo.htmlacademy.ru'
+              method='post'>
+                <input class='suscribe-email' type='email' name='email'
+                placeholder='Электронная почта' id='email'>
+                <input class='button suscribe-button' type='submit' value='Отправить'>
+              </form>
+            </div>
           </section>
         </div>
       </main>
@@ -209,18 +207,16 @@
         <div class='map-interactive' id='map'></div>
         <div class='site-container'>
           <div class='contacts'>
-            <p>
-              Адрес главного офиса и офлайн-магазина:
-              <b class='adress'>ул. Большая Конюшенная 19/8, Санкт-Петербург
-              </b>
-            </p>
-            <p class='time-and-phone'>
-              Для заказов по телефону:
-              <p>
-                <a class='phone' href="tel:+78122757575" >8 812 450-25-25</a>
-                (с 10 до 20 ежедневно)
+            <div>
+              <p>Адрес главного офиса и офлайн-магазина:</p>
+              <p class='adress'>ул. Большая Конюшенная 19/8, Санкт-Петербург
               </p>
-            </p>
+            </div>
+            <div class='time-and-phone'>
+              <p>Для заказов по телефону:</p>
+              <a class='phone' href="tel:+78122757575" >8 812 450-25-25</a>
+              <p>(с 10 до 20 ежедневно)</p>
+            </div>
             <a class='button write-us-link' href='#'>Форма обратной связи</a>
           </div>
         </div>
@@ -303,14 +299,22 @@
           </ul>
         </section>
         <ul class='info-list'>
-          <li class='info-item special-item'><a href='#'>Для поставщиков</a></li>
-          <li class='info-item'><a href='#'>О производстве</a></li>
-          <li class='info-item'><a href='#'>Наши документы</a></li>
-          <li class='info-item'><a href='#'>Экологические стандарты</a></li>
+          <li>
+            <ul class='info-columns'>
+              <li class='info-item special-item'><a href='#'>Для поставщиков</a></li>
+              <li class='info-item'><a href='#'>О производстве</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class='info-columns'>
+              <li class='info-item'><a href='#'>Наши документы</a></li>
+              <li class='info-item'><a href='#'>Экологические стандарты</a></li>
+            </ul>
+          </li>
         </ul>
         <div class="footer-copyright">
-          <a href='https://htmlacademy.ru/intensive/htmlcss'>
-            <img src='img/logo-htmlacademy-small.svg' width='120' height='38'
+          <a class='footer-logo' href='https://htmlacademy.ru/intensive/htmlcss'>
+            <img src='img/footer-logo.svg' width='161' height='55'
             alt='HTML Academy'>
           </a>
           <p class='made-in'>
