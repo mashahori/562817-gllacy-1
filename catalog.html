@@ -17,7 +17,7 @@
             <img src='img/logo-gllacy.svg' width='154' height='64' alt='Логотип магазина Глэйси'>
           </a>
         <ul class='site-nav'>
-          <li>
+          <li class='site-nav-catalog'>
             <a class='site-nav-current' href='#'>Каталог</a>
             <ul class='menu-list-hover'>
               <li class='modal-menu-item'><a class ='new-ice-cream' href='#'>Новинки</a></li>
@@ -44,9 +44,13 @@
             <form class='login-form-hover' action='https://echo.htmlacademy.ru' method='post'>
               <input type='email' name='email' placeholder='Электронная почта'>
               <input type='password' name='password' placeholder='Пароль' id='password'>
-              <input class='button login-button' type='submit' value='Войти'>
-              <a class="link-login" href="#">Забыли пароль?</a>
-              <a class="link-login" href="#">Новая регистрация</a>
+              <div class='login-link-wrapper'>
+                <input class='button login-button' type='submit' value='Войти'>
+                <div>
+                  <a class="link-login" href="#">Забыли пароль?</a>
+                  <a class="link-login" href="#">Новая регистрация</a>
+                </div>
+              </div>
             </form>
           </li>
           <li class='cart-item'>
@@ -55,8 +59,8 @@
               <h2 class='visually-hidden'>Товары корзины</h2>
               <table class='cart-table'>
                 <tr>
-                  <td>
-                    <span class="modal-cart-close">x</span>
+                  <td class='cart-item-delete'>
+                    <span class='visually-hidden'>Удалить</span>
                   </td>
                   <td>
                     <img src='img/little-ice-orange.png' width='33' height='33'
@@ -65,7 +69,7 @@
                   <td class='cart-item-title'>
                     Пломбир с апельсиновым джемом
                   </td>
-                  <td>
+                  <td class='cart-item-price'>
                     1,5 кг х <span>200 руб.</span>
                   </td>
                   <td>
@@ -73,8 +77,8 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
-                    <span class="modal-cart-close">x</span>
+                  <td class='cart-item-delete'>
+                    <span class='visually-hidden'>Удалить</span>
                   </td>
                   <td>
                     <img src='img/little-ice-rose.png' width='33' height='33'
@@ -83,7 +87,7 @@
                   <td class='cart-item-title'>
                     Клубничный пломбир с присыпкой из белого шоколада
                   </td>
-                  <td>
+                  <td class='cart-item-price'>
                     1,5 кг х <span>300 руб.</span>
                   </td>
                   <td>
@@ -185,7 +189,7 @@
                 <label for='filler-chocolate'>шоколадные</label>
               </li>
               <li class='fillers-item'>
-                <input class='visually-hidden' type='checkbox' name='sugar' id='filler-sugar' checked disabled>
+                <input class='visually-hidden' type='checkbox' name='sugar' id='filler-sugar' checked>
                 <label for='filler-sugar'>сахарные присыпки</label>
               </li>
               <li class='fillers-item'>
@@ -211,7 +215,23 @@
           <li class='catalog-item'>
             <img src='img/1.png' width='267' height='267'
                alt='Сливочное с апельсиновым джемом и цитрусовой стружкой'>
-            <p class='catalog-price'>310&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              310
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочное с апельсиновым джемом и цитрусовой стружкой
                </a>
@@ -222,7 +242,23 @@
           <li class='catalog-item'>
             <img src='img/2.png' width='267' height='267'
                alt='Сливочно-кофейное с кусочками шоколада'>
-            <p class='catalog-price'>380&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              380
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочно-кофейное с кусочками шоколада
                </a>
@@ -233,7 +269,23 @@
           <li class='catalog-item'>
             <img src='img/3.png' width='267' height='267'
                alt='Сливочно-клубничное с присыпкой из белого шоколада'>
-            <p class='catalog-price'>355&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              355
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочно-клубничное с присыпкой из белого шоколада
                </a>
@@ -244,7 +296,23 @@
           <li class='catalog-item'>
             <img src='img/4.png' width='267' height='267'
                alt='Сливочное крем-брюле с карамельной подливкой'>
-            <p class='catalog-price'>415&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              415
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочное крем-брюле с карамельной подливкой
                </a>
@@ -255,7 +323,23 @@
           <li class='catalog-item'>
             <img src='img/11.png' width='267' height='267'
                alt='Сливочное с брусничным джемом'>
-            <p class='catalog-price'>325&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              325
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочное с брусничным джемом
                </a>
@@ -266,7 +350,23 @@
           <li class='catalog-item'>
             <img src='img/12.png' width='267' height='267'
                alt='Сливочно-черничное с цельными ягодами черники'>
-            <p class='catalog-price'>410&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              410
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочно-черничное с цельными ягодами черники
                </a>
@@ -277,7 +377,23 @@
           <li class='catalog-item'>
             <img src='img/13.png' width='267' height='267'
                alt='Сливочно-лимонное с карамельной присыпкой'>
-            <p class='catalog-price'>375&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              375
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочно-лимонное с карамельной присыпкой
                </a>
@@ -288,7 +404,23 @@
           <li class='catalog-item'>
             <img src='img/14.png' width='267' height='267'
                alt='Сливочное с шоколадной стружкой'>
-            <p class='catalog-price'>320&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              320
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочное с шоколадной стружкой
                </a>
@@ -299,7 +431,23 @@
           <li class='catalog-item'>
             <img src='img/21.png' width='267' height='267'
                alt='Сливочно-ванильное с кусочками шоколада'>
-            <p class='catalog-price'>440&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              440
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочно-ванильное с кусочками шоколада
                </a>
@@ -310,7 +458,23 @@
           <li class='catalog-item'>
             <img src='img/22.png' width='267' height='267'
                alt='Сливочноe с ментоловым сиропом'>
-            <p class='catalog-price'>435&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              435
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочноe с ментоловым сиропом
                </a>
@@ -321,7 +485,23 @@
           <li class='catalog-item'>
             <img src='img/23.png' width='267' height='267'
                alt='Сливочное с кусочками черного шоколада'>
-            <p class='catalog-price'>355&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              355
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочное с кусочками черного шоколада
                </a>
@@ -332,7 +512,23 @@
           <li class='catalog-item'>
             <img src='img/24.png' width='267' height='267'
                alt='Сливочное с мятным сиропом'>
-            <p class='catalog-price'>420&#8381;<span>/кг</span></p>
+            <p class='catalog-price'>
+              420
+              <svg class='hit-price-ruble' width='39' height='45'
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
+                 <defs>
+                   <filter id="a" filterUnits="userSpaceOnUse">
+                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                     <feOffset dy="1" result="offsetBlur"/>
+                     <feFlood flood-color="#313235" flood-opacity=".5"/>
+                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                     <feBlend in="SourceGraphic" in2="dropShadow"/>
+                   </filter>
+                 </defs>
+                 <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
+               </svg>
+              <span>/кг</span>
+            </p>
             <a class='catalog-link' href='#'>
                  Сливочное с мятным сиропом
                </a>
@@ -360,7 +556,7 @@
         </ul>
       </section>
     </main>
-    <footer class='main-footer'>
+    <footer class='main-footer inner-footer'>
       <section class='social'>
         <h2 class='visually-hidden'>Мы в социальных сетях</h2>
         <ul class='social-list'>
@@ -457,7 +653,7 @@
         <p class='made-in'>
           Сделано в
           <a class="link copyright-link" href='https://htmlacademy.ru/intensive/htmlcss'>HTML Academy</a>
-          &copy;2017
+          &copy; 2017
         </p>
       </div>
     </footer>
