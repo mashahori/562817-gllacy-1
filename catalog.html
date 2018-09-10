@@ -14,8 +14,8 @@
     <header class='main-header'>
       <nav class='main-nav'>
         <a class='main-header-logo' href='index.html'>
-            <img src='img/logo-gllacy.svg' width='154' height='64' alt='Логотип магазина Глэйси'>
-          </a>
+          <img src='img/logo-gllacy.svg' width='154' height='64' alt='Логотип магазина Глэйси'>
+        </a>
         <ul class='site-nav'>
           <li class='site-nav-catalog'>
             <a class='site-nav-current' href='#'>Каталог</a>
@@ -33,11 +33,11 @@
         <ul class='user-nav'>
           <li class='search-item'>
             <a class='search' href='#'>
-                <span class='visually-hidden'>Поиск</span>
-              </a>
+              <span class='visually-hidden'>Поиск</span>
+            </a>
             <form class='search-form-hover' action='https://echo.htmlacademy.ru' method='get'>
               <input type='search' name='search' placeholder='Что ищем?'>
-              </form>
+            </form>
           </li>
           <li class='login-item'>
             <a class='login' href='login.html'>Вход</a>
@@ -62,17 +62,17 @@
                   <td class='cart-item-delete'>
                     <span class='visually-hidden'>Удалить</span>
                   </td>
-                  <td>
+                  <td class='cart-item-img'>
                     <img src='img/little-ice-orange.png' width='33' height='33'
                       alt='Пломбир с апельсиновым джемом'>
-                    </td>
+                  </td>
                   <td class='cart-item-title'>
                     Пломбир с апельсиновым джемом
                   </td>
                   <td class='cart-item-price'>
                     1,5 кг х <span>200 руб.</span>
                   </td>
-                  <td>
+                  <td class='cart-item-end-price'>
                     300 руб.
                   </td>
                 </tr>
@@ -80,7 +80,7 @@
                   <td class='cart-item-delete'>
                     <span class='visually-hidden'>Удалить</span>
                   </td>
-                  <td>
+                  <td class='cart-item-img'>
                     <img src='img/little-ice-rose.png' width='33' height='33'
                       alt='Клубничный пломбир с присыпкой из белого шоколада'>
                     </td>
@@ -90,7 +90,7 @@
                   <td class='cart-item-price'>
                     1,5 кг х <span>300 руб.</span>
                   </td>
-                  <td>
+                  <td class='cart-item-end-price'>
                     450 руб.
                   </td>
                 </tr>
@@ -124,31 +124,31 @@
             <legend>Сортировка:</legend>
             <div class='select-wrapper'>
               <select class='sorting' name='sorting'>
-                  <option class='selected' value='popular' selected>по популярности</option>
-                  <option value='cheap'>сначала недорогие</option>
-                  <option value='expensive'>сначала дорогие</option>
-                  <option value='fat'>по жирности</option>
-                </select>
+                <option class='selected' value='popular' selected>по популярности</option>
+                <option value='cheap'>сначала недорогие</option>
+                <option value='expensive'>сначала дорогие</option>
+                <option value='fat'>по жирности</option>
+              </select>
             </div>
           </fieldset>
           <fieldset class='price-filter'>
             <div class='price-value'>
               <span class='visually-hidden' >
-                  Введите минимальное значение
-                </span>
+                Введите минимальное значение
+              </span>
               <label for='min-price'>
-                  Цена:
-                  <input type='text' name='min-price' id='min-price' placeholder='100' value='100'>
-                  руб.
-                </label>
+                Цена:
+                <input type='text' name='min-price' id='min-price' placeholder='100' value='100'>
+                руб.
+              </label>
               <span class='visually-hidden'>
-                  Введите максимальное значение
-                </span>
+                Введите максимальное значение
+              </span>
               <label for='max-price'>
-                     –
-                  <input type='text' name='max-price' id='max-price' placeholder='500' value='500'>
-                  руб.
-               </label>
+                –
+                <input type='text' name='max-price' id='max-price' placeholder='500' value='500'>
+                руб.
+              </label>
             </div>
             <div class='range-filter'>
               <div class='range-controls'>
@@ -219,22 +219,22 @@
               310
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="a" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="a" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочное с апельсиновым джемом и цитрусовой стружкой
-               </a>
+              Сливочное с апельсиновым джемом и цитрусовой стружкой
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -246,22 +246,22 @@
               380
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="b" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="b" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочно-кофейное с кусочками шоколада
-               </a>
+              Сливочно-кофейное с кусочками шоколада
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -273,22 +273,22 @@
               355
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="c" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="c" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочно-клубничное с присыпкой из белого шоколада
-               </a>
+              Сливочно-клубничное с присыпкой из белого шоколада
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -300,22 +300,22 @@
               415
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="d" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="d" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочное крем-брюле с карамельной подливкой
-               </a>
+              Сливочное крем-брюле с карамельной подливкой
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -327,22 +327,22 @@
               325
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="e" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="e" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочное с брусничным джемом
-               </a>
+              Сливочное с брусничным джемом
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -354,22 +354,22 @@
               410
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="f" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="f" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочно-черничное с цельными ягодами черники
-               </a>
+              Сливочно-черничное с цельными ягодами черники
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -381,22 +381,22 @@
               375
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="g" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="g" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочно-лимонное с карамельной присыпкой
-               </a>
+              Сливочно-лимонное с карамельной присыпкой
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -408,22 +408,22 @@
               320
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="h" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="h" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочное с шоколадной стружкой
-               </a>
+              Сливочное с шоколадной стружкой
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -435,22 +435,22 @@
               440
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="i" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="i" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочно-ванильное с кусочками шоколада
-               </a>
+              Сливочно-ванильное с кусочками шоколада
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -462,22 +462,22 @@
               435
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="j" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="j" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочноe с ментоловым сиропом
-               </a>
+              Сливочноe с ментоловым сиропом
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -489,22 +489,22 @@
               355
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="k" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="k" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочное с кусочками черного шоколада
-               </a>
+              Сливочное с кусочками черного шоколада
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -516,22 +516,22 @@
               420
               <svg class='hit-price-ruble' width='39' height='45'
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 45">
-                 <defs>
-                   <filter id="l" filterUnits="userSpaceOnUse">
-                     <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
-                     <feOffset dy="1" result="offsetBlur"/>
-                     <feFlood flood-color="#313235" flood-opacity=".5"/>
-                     <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
-                     <feBlend in="SourceGraphic" in2="dropShadow"/>
-                   </filter>
+                <defs>
+                  <filter id="l" filterUnits="userSpaceOnUse">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+                    <feOffset dy="1" result="offsetBlur"/>
+                    <feFlood flood-color="#313235" flood-opacity=".5"/>
+                    <feComposite in2="offsetBlur" operator="in" result="dropShadow"/>
+                    <feBlend in="SourceGraphic" in2="dropShadow"/>
+                  </filter>
                  </defs>
                  <path d="M16 25h7.451a9.5 9.5 0 0 0 9.5-9.5 9.5 9.5 0 0 0-9.5-9.5H11v14H7v5h4v3H7v5h4v4h5v-4h15v-5H16v-3zm0-14h7.451v-.03a4.53 4.53 0 1 1 0 9.06V20H16v-9z" fill="#FFF" filter="url(#a)"/>
-               </svg>
+              </svg>
               <span>/кг</span>
             </p>
             <a class='catalog-link' href='#'>
-                 Сливочное с мятным сиропом
-               </a>
+              Сливочное с мятным сиропом
+            </a>
             <div class='catalog-item-overlay'>
               <a class='button catalog-hover-button' href='#'>Быстрый просмотр</a>
             </div>
@@ -540,8 +540,8 @@
         <ul class='paginator-list'>
           <li class='pagination-item disable'>
             <a class='page-back'>
-                <span class='visually-hidden'>Назад</span>
-              </a>
+              <span class='visually-hidden'>Назад</span>
+            </a>
           </li>
           <li class='pagination-item pagination-item-current'><a>1</a></li>
           <li class='pagination-item'><a href='#'>2</a></li>
@@ -550,8 +550,8 @@
           <li class='pagination-item'><a href='#'>5</a></li>
           <li class='pagination-item'>
             <a href ='#' class='page-next'>
-                <span class='visually-hidden'>Вперед</span>
-              </a>
+              <span class='visually-hidden'>Вперед</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -562,8 +562,8 @@
         <ul class='social-list'>
           <li class='social-button'>
             <a href='#'>
-                <span class='visually-hidden'>Твиттер</span>
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
+              <span class='visually-hidden'>Твиттер</span>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
                 	 height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                 <g id="Layer_1">
                 </g>
@@ -576,15 +576,15 @@
                 		c0.227-2.214,1.24-3.699,3.168-4.325c1.84-0.479,3.255,0.26,3.901,1.138c0.737-0.224,1.453-0.466,2.193-0.685
                 		c-0.004,0.833-0.569,1.463-0.935,1.709c0.747,0.165,1.423-0.475,1.423-0.475C25.467,11.818,24.557,12.58,23.944,12.809z"/>
                 </g>
-                </svg>
-              </a>
+              </svg>
+            </a>
           </li>
           <li class='social-button'>
             <a href='#'>
-                <span class='visually-hidden'>Инстаграм</span>
-                <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <span class='visually-hidden'>Инстаграм</span>
+              <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
-                <g>
+                  <g>
                 	<path fill="#FFFFFF" d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
                 		h-0.897v6.838h11.396V14.86h-0.897C20.865,15.227,20.916,15.606,20.916,16z"/>
                 	<path fill="#FFFFFF" d="M15.978,18.659c1.466,0,2.659-1.193,2.659-2.659s-1.193-2.659-2.659-2.659
@@ -593,24 +593,24 @@
                 	<path fill="#FFFFFF" d="M16,0C7.164,0,0,7.164,0,16c0,8.837,7.164,16,16,16c8.837,0,16-7.163,16-16C32,7.164,24.837,0,16,0z
                 		 M23.955,21.698c0,1.254-1.025,2.279-2.279,2.279H10.279C9.026,23.978,8,22.952,8,21.698V10.302c0-1.253,1.026-2.279,2.279-2.279
                 		h11.396c1.254,0,2.279,1.026,2.279,2.279V21.698z"/>
-                </g>
-                </svg>
-              </a>
+                  </g>
+              </svg>
+            </a>
           </li>
           <li class='social-button'>
             <a href='#'>
-                <span class='visually-hidden'>Фэйсбук</span>
-                <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <span class='visually-hidden'>Фэйсбук</span>
+              <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                 <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
                 	v3.444h3.021v3.445h-3.021v8.61h-3.021v-8.61H11v-3.445h3.021V9.455c0-1.902,1.353-3.445,3.021-3.445h3.021V9.455z"/>
-                </svg>
-              </a>
+              </svg>
+            </a>
           </li>
           <li class='social-button'>
             <a href='#'>
-                <span class='visually-hidden'>Вконтакте</span>
-                <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <span class='visually-hidden'>Вконтакте</span>
+              <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                 <g>
                 	<path fill="#FFFFFF" d="M16.637,14.495c0.402-0.019,0.719-0.082,0.951-0.188c0.326-0.145,0.54-0.33,0.641-0.559
@@ -626,8 +626,8 @@
                 		c0.26,0.455,0.392,0.975,0.392,1.558c0,0.678-0.179,1.278-0.536,1.795c-0.358,0.518-0.863,0.92-1.517,1.208v0.075
                 		c0.917,0.182,1.642,0.559,2.179,1.13c0.537,0.571,0.807,1.325,0.807,2.261C23.013,19.392,22.875,19.997,22.602,20.531z"/>
                 </g>
-                </svg>
-              </a>
+              </svg>
+            </a>
           </li>
         </ul>
       </section>
@@ -647,9 +647,9 @@
       </ul>
       <div class="footer-copyright">
         <a class='footer-logo' href='https://htmlacademy.ru/intensive/htmlcss'>
-            <img src='img/footer-logo.svg' width='161' height='55'
+          <img src='img/footer-logo.svg' width='161' height='55'
             alt='HTML Academy'>
-          </a>
+        </a>
         <p class='made-in'>
           Сделано в
           <a class="link copyright-link" href='https://htmlacademy.ru/intensive/htmlcss'>HTML Academy</a>
