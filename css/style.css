@@ -53,7 +53,8 @@ input[type='radio'].visually-hidden {
 .search-form-hover input:hover,
 .login-form-hover input:hover,
 .suscribe-form input:hover,
-.feedback-form input:hover {
+.feedback-form input:hover,
+.feedback-form textarea:focus {
   border-color: #c7c6c5;
   box-shadow: 0 0 0 1px #c7c6c5;
   outline: none;
@@ -62,7 +63,8 @@ input[type='radio'].visually-hidden {
 .search-form-hover input:focus,
 .login-form-hover input:focus,
 .suscribe-form input:focus,
-.feedback-form input:focus {
+.feedback-form input:focus,
+.feedback-form textarea:focus {
   border-color: #8fbdec;
   box-shadow: 0 0 0 1px #8fbdec;
   outline: none;
@@ -594,9 +596,9 @@ textarea::-webkit-input-placeholder {
   display: none;
 }
 
-.btn-1:checked~.site-wrapper #slide-1,
-.btn-2:checked~.site-wrapper #slide-2,
-.btn-3:checked~.site-wrapper #slide-3 {
+.btn-1:checked~.site-wrapper .slide-1,
+.btn-2:checked~.site-wrapper .slide-2,
+.btn-3:checked~.site-wrapper .slide-3 {
   display: block;
 }
 
@@ -606,17 +608,17 @@ textarea::-webkit-input-placeholder {
   background-color: #ffffff;
 }
 
-#btn-1:checked~.site-wrapper {
+.btn-1:checked~.site-wrapper {
   background-color: #849d8f;
   background-image: url('../img/slider-1.png');
 }
 
-#btn-2:checked~.site-wrapper {
+.btn-2:checked~.site-wrapper {
   background-color: #8996a6;
   background-image: url('../img/slider-2.png');
 }
 
-#btn-3:checked~.site-wrapper {
+.btn-3:checked~.site-wrapper {
   background-color: #9d8b84;
   background-image: url('../img/slider-3.png');
 }
@@ -824,6 +826,8 @@ textarea::-webkit-input-placeholder {
   margin: 7px 7px 0px;
   text-align: center;
   display: block;
+  z-index: 20;
+  position: relative;
 }
 
 .hit-item .hit-link:hover,
@@ -833,7 +837,6 @@ textarea::-webkit-input-placeholder {
   border-color: #ffbc9e;
 }
 
-.hit-item .hit-hover-button,
 .hit-item .hit-hover-button {
   display: none;
   position: absolute;
@@ -843,6 +846,7 @@ textarea::-webkit-input-placeholder {
   border-radius: 20px;
   font-size: 18px;
   line-height: 30px;
+  text-decoration: none;
 }
 
 .hit-item:hover .hit-hover-button,
@@ -868,6 +872,7 @@ textarea::-webkit-input-placeholder {
   padding-left: 46px;
   padding-right: 46px;
   box-sizing: border-box;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .features {
@@ -1018,6 +1023,7 @@ textarea::-webkit-input-placeholder {
 .map {
   min-height: 430px;
   position: relative;
+  overflow: hidden;
 }
 
 .contacts-map .contacts {
@@ -1026,7 +1032,7 @@ textarea::-webkit-input-placeholder {
   padding: 30px 25px;
   background-color: #fefefe;
   position: relative;
-  z-index: 20;
+  z-index: 40;
   top: 64px;
   right: 0px;
   left: 845px;
@@ -1037,10 +1043,26 @@ textarea::-webkit-input-placeholder {
   width: 1250px;
   height: 430px;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   left: 50%;
   top: 0;
   transform: translateX(-50%);
+}
+
+.map-interactive {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 430px;
+}
+
+.map-interactive iframe {
+  border: none;
+  position: relative;
+  z-index: 30;
+  width: 100%;
 }
 
 .contacts p {
@@ -1261,14 +1283,19 @@ textarea::-webkit-input-placeholder {
   z-index: 100;
 }
 
+.modal-show {
+  display: block;
+}
+
 .modal-feedback {
   position: fixed;
-  top: 338px;
+  top: 50%;
   left: 50%;
-  margin-left: -238px;
+  transform: translate(-50%,-50%);
   width: 430px;
   padding: 15px 25px 26px 24px;
   border-radius: 10px;
+  z-index: 100;
 }
 
 .modal-feedback .modal-close {
@@ -1317,7 +1344,7 @@ textarea::-webkit-input-placeholder {
   align-items: flex-start;
 }
 
-.feedback-form input {
+.feedback-form input:not(.feedback-button) {
   margin-bottom: 20px;
   padding: 11px 14px 7px 14px;
   line-height: 24px;
@@ -1342,7 +1369,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .modal-feedback .feedback-button {
-  margin-left: 292px;
+  align-self: flex-end;
   padding: 11px 22px 10px 24px;
 }
 
@@ -1468,6 +1495,10 @@ textarea::-webkit-input-placeholder {
   appearance: none;
 }
 
+.sorting-list .sorting::-ms-expand {
+display: none;
+}
+
 .select-wrapper {
   position: relative;
 }
@@ -1529,7 +1560,7 @@ textarea::-webkit-input-placeholder {
 
 .price-filter input {
   width: 26px;
-  background-color: inherit;
+  background-color: transparent;
   border: none;
   color: inherit;
   font-size: 14px;
@@ -1780,6 +1811,8 @@ textarea::-webkit-input-placeholder {
   margin: 5px 5px 0px;
   text-align: center;
   display: block;
+  z-index: 20;
+  position: relative;
 }
 
 .catalog-item .catalog-link:hover,
@@ -1799,6 +1832,7 @@ textarea::-webkit-input-placeholder {
   border-radius: 20px;
   font-size: 18px;
   line-height: 30px;
+  text-decoration: none;
 }
 
 .catalog-item:hover .catalog-hover-button,
@@ -1819,11 +1853,12 @@ textarea::-webkit-input-placeholder {
   background-color: rgba(255, 255, 255, 0.2);
   top: -6px;
   left: -14px;
-  z-index: 2;
+  z-index: 10;
   border-radius: 5px;
   padding-left: 46px;
   padding-right: 46px;
   box-sizing: border-box;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .paginator-list {

@@ -78,19 +78,19 @@
             <label  class='slider-controls-item slider-controls-item--3' for='btn-3'>Третий</label>
           </div>
           <ul class='slider-list'>
-            <li class='slider-item' id='slide-1'>
+            <li class='slider-item slide-1' id='slide-1'>
               <p>Крем-брюле и пломбир
                 с малиновым джемом
               </p>
               <a class='button slider-button' href='#'>Давайте оба!</a>
             </li>
-            <li class='slider-item' id='slide-2'>
+            <li class='slider-item slide-2' id='slide-2'>
               <p>Шоколадный пломбир
                 и лимонный сорбет
               </p>
               <a class='button slider-button' href='#'>Давайте оба!</a>
             </li>
-            <li class='slider-item' id='slide-3'>
+            <li class='slider-item slide-3' id='slide-3'>
               <p>Пломбир с помадкой
                 и клубничный щербет
               </p>
@@ -281,7 +281,10 @@
       <div class='map'>
         <img class='map-image' src='img/map.png' width='1250' height='430'
           alt='ул. Большая Конюшенная 19/8, Санкт-Петербург'>
-        <div class='map-interactive' id='map'></div>
+        <div class='map-interactive' id='map'>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533238!2d30.320858716143423!3d59.938716481876206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1536647960665"
+           width="1200" height="430" style="border:0" allowfullscreen></iframe>
+        </div>
         <div class='site-container'>
           <div class='contacts'>
             <div>
@@ -407,19 +410,20 @@
     <section class='modal modal-feedback'>
       <h2>Мы обязательно вам ответим!</h2>
       <form class='feedback-form' action='https://echo.htmlacademy.ru' method='post'>
-        <input type='text' name='name' placeholder='Как вас зовут?'>
-        <input type='email' name='email' placeholder='Ваша почта для ответа?'>
+        <input class='feedback-form-name' type='text' name='name' placeholder='Как вас зовут?'>
+        <input class='feedback-form-email' type='email' name='email' placeholder='Ваша почта для ответа?'>
         <textarea class='feedback-text' placeholder='Напишите что-нибудь...'
            rows='5' cols='50'>
             Напишите что-нибудь...
         </textarea>
+        <input class='button feedback-button' type='submit' value='Отправить'>
       </form>
-      <input class='button feedback-button' type='submit' value='Отправить'>
-      <button class='modal-close' type='button' >
+        <button class='modal-close' type='button' >
         <span class='visually-hidden'>Закрыть</span>
       </button>
     </section>
   </div>
+  <script src='js/popup.js'></script>
 </body>
 
 </html>
