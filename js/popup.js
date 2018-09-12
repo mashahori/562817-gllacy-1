@@ -29,11 +29,15 @@ try {
   close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
   });
 
   form.addEventListener("submit", function (evt) {
     if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
       evt.preventDefault();
+      popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;
+      popup.classList.add("modal-error");
       console.log("Нужно обязательно ввести имя, адрес электронной почты и текст");
     } else {
       if (isStorageSupport) {
@@ -47,6 +51,7 @@ try {
       evt.preventDefault();
       if (popup.classList.contains("modal-show")) {
         popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
       }
     }
   });
