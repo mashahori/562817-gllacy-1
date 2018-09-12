@@ -1046,7 +1046,7 @@ input[type='radio'].visually-hidden {
 .map {
   min-height: 430px;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .contacts-map .contacts {
@@ -1131,6 +1131,7 @@ input[type='radio'].visually-hidden {
   font-weight: bold;
   margin-bottom: 3px;
   display: block;
+  text-decoration: none;
 }
 
 .contacts .write-us-link {
@@ -1876,6 +1877,10 @@ input[type='radio'].visually-hidden {
   display: block;
   z-index: 20;
   position: relative;
+}
+
+.catalog-item img {
+  border-radius: 50%;
 }
 
 .catalog-item .catalog-link:hover,
