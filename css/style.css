@@ -7,6 +7,7 @@ body {
   color: #323232;
   font-weight: 400;
   background-color: #849d8f;
+  min-width: 1200px;
 }
 
 a {
@@ -340,7 +341,7 @@ input[type='radio'].visually-hidden {
 .login-form-hover input::-moz-placeholder,
 .suscribe-form input::-moz-placeholder,
 .feedback-form input::-moz-placeholder,
-.feedback-form textarea::-webkit-input-placeholder {
+.feedback-form textarea::-moz-placeholder {
   /* Firefox 19+ */
   color: rgb(153, 153, 153);
   font-weight: 400;
@@ -349,8 +350,9 @@ input[type='radio'].visually-hidden {
 .search-form-hover input:-ms-input-placeholder,
 .login-form-hover input:-ms-input-placeholder,
 .suscribe-form input:-ms-input-placeholder,
-.feedback-form input:-ms-input-placeholder,
-.feedback-form textarea::-webkit-input-placeholder {
+.feedback-form textarea:-ms-input-placeholder,
+.feedback-form .feedback-form-name:-ms-input-placeholder,
+.feedback-form .feedback-form-email:-ms-input-placeholder {
   /* IE 10+ */
   color: rgb(153, 153, 153);
   font-weight: 400;
@@ -360,7 +362,7 @@ input[type='radio'].visually-hidden {
 .login-form-hover input:-moz-placeholder,
 .suscribe-form input:-moz-placeholder,
 .feedback-form input:-moz-placeholder,
-.feedback-form textarea::-webkit-input-placeholder {
+.feedback-form textarea:-moz-placeholder {
   /* Firefox 18- */
   color: rgb(153, 153, 153);
   font-weight: 400;
@@ -404,8 +406,8 @@ input[type='radio'].visually-hidden {
   padding: 8px 14px 9px;
 }
 
-.user-nav .login-item:hover .login-form-hover,
-.user-nav .login-item:focus .login-form-hover {
+.login-item:hover .login-form-hover,
+.login-item:focus .login-form-hover {
   display: block;
 }
 
@@ -457,7 +459,7 @@ input[type='radio'].visually-hidden {
   top: 50px;
   right: 0;
   border-radius: 5px;
-  padding: 7px 15px 18px 16px;
+  padding: 18px 15px 22px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
   box-sizing: border-box;
   width: 540px;
@@ -465,9 +467,7 @@ input[type='radio'].visually-hidden {
 }
 
 .cart-table {
-  padding: 0;
-  margin: 0;
-  border-spacing: 0px 7px;
+  border-collapse: collapse;
 }
 
 .cart-table .cart-item-delete {
@@ -476,6 +476,8 @@ input[type='radio'].visually-hidden {
   border: 0;
   cursor: pointer;
   position: relative;
+  width: 26px;
+  padding-top: 4px;
 }
 
 .cart-item-delete::before,
@@ -483,9 +485,9 @@ input[type='radio'].visually-hidden {
   content: "";
   position: absolute;
   width: 15px;
-  height: 2px;
+  height: 1px;
   background-color: #2c2829;
-  top: 12px;
+  top: 16px;
   left: -2px;
 }
 
@@ -501,37 +503,41 @@ input[type='radio'].visually-hidden {
   font-size: 13px;
   line-height: 16px;
   color: #323232;
-  min-width: 50px;
   vertical-align: middle;
   padding-top: 0px;
+  padding-bottom: 17px;
+  vertical-align: top;
 }
 
 .cart-table .cart-item-price {
-  min-width: 155px;
+  width: 148px;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: top;
+  padding-top: 10px;
 }
 
 .cart-table .cart-item-title {
   min-width: 220px;
+  width: 225px;
+  padding-top: 10px;
 }
 
 .cart-table .cart-item-end-price {
+  padding-top: 10px;
   min-width: 68px;
-  vertical-align: middle;
+  width: 70px;
+  text-align: center;
+  padding-right: 7px;
 }
 
 .cart-table .cart-item-img {
   vertical-align: top;
+  width: 50px;
+  padding-top: 0;
 }
 
 .cart-table tr {
-  height: 50px;
   text-align: left;
-}
-
-.cart-table tr:last-child {
-  height: 45px;
 }
 
 .cart-hover span {
@@ -543,8 +549,9 @@ input[type='radio'].visually-hidden {
   line-height: 18px;
   font-weight: 700;
   text-align: right;
-  padding-right: 15px;
-  height: 45px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-top: 1px solid #cacac7;
 }
 
 .cart-hover .cart-link {
@@ -862,6 +869,7 @@ input[type='radio'].visually-hidden {
   font-size: 18px;
   line-height: 30px;
   text-decoration: none;
+  text-shadow: none;
 }
 
 .hit-item:hover .hit-hover-button,
@@ -918,7 +926,7 @@ input[type='radio'].visually-hidden {
 .feature-item {
   margin: 0;
   padding: 0;
-  width: 469px;
+  width: 472px;
   padding-left: 58px;
   padding-top: 13px;
   margin-top: 8px;
@@ -968,6 +976,7 @@ input[type='radio'].visually-hidden {
   display: block;
   min-width: 560px;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .post-in-blog h2 {
@@ -999,18 +1008,17 @@ input[type='radio'].visually-hidden {
 }
 
 .suscribe {
-  background-image: url('../img/post-back.svg');
-  background-repeat: no-repeat;
-  position: 0 0;
-  margin-right: 0;
+  background-image: repeating-linear-gradient(135deg, #f8f7f4, #f8f7f4 7px,
+    #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
   padding: 5px 6px;
   display: block;
+  border-radius: 10px;
 }
 
 .suscribe-wrapper {
   background-color: #f8f7f4;
   border-radius: 10px;
-  padding: 30px 21px 35px;
+  padding: 30px 20px 35px 21px;
 }
 
 .suscribe .suscribe-text {
@@ -1030,7 +1038,7 @@ input[type='radio'].visually-hidden {
   border: 1px solid #d3d3d2;
   color: #323232;
   font-weight: 700;
-  margin-right: 5px;
+  margin-right: 7px;
 }
 
 .suscribe .suscribe-button {
@@ -1901,6 +1909,7 @@ input[type='radio'].visually-hidden {
   font-size: 18px;
   line-height: 30px;
   text-decoration: none;
+  text-shadow: none;
 }
 
 .catalog-item:hover .catalog-hover-button,
