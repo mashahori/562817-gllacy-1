@@ -385,6 +385,7 @@ input[type='radio'].visually-hidden {
   border: 1px solid #d3d3d2;
   border-radius: 5px;
   padding: 9px 12px;
+  min-height: 44px;
 }
 
 .login-form-hover {
@@ -404,6 +405,7 @@ input[type='radio'].visually-hidden {
   border-radius: 5px;
   margin-bottom: 20px;
   padding: 8px 14px 9px;
+  min-height: 24px;
 }
 
 .login-item:hover .login-form-hover,
@@ -1039,6 +1041,7 @@ input[type='radio'].visually-hidden {
   color: #323232;
   font-weight: 700;
   margin-right: 7px;
+  min-height: 44px;
 }
 
 .suscribe .suscribe-button {
@@ -1435,6 +1438,7 @@ input[type='radio'].visually-hidden {
   width: 267px;
   color: #323232;
   font-weight: 700;
+  min-height: 44px;
 }
 
 .feedback-form textarea {
